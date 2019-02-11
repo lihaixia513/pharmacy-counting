@@ -45,7 +45,7 @@ for keys, values in d.items():  #go through the keys values in the dictionary it
 sort_l = sorted(out_l,key=lambda x:(-x[2],x[0])) #sort it -x[2] meas the negative valus of total_cost, so ascending -x[2] means desceding it, x[0] asceding based on the first chracter of the drug_name
 #=============write the result in the txt file
 fout = open(output_file, 'w') #write the results in the file top_cost_drug.txt
-fout.write('drug_name,num_prescriber,total_cost \n') #the first line in this file
+fout.write('drug_name,num_prescriber,total_cost\n') #the first line in this file
 for items in sort_l: #transfer through the list and write it in the file
     fout.write('%s,%d,%.0f\n' % (items[0],items[1],items[2]))
 fout.close()        
