@@ -47,7 +47,7 @@ sort_l = sorted(out_l,key=lambda x:(-x[2],x[0])) #sort it -x[2] meas the negativ
 fout = open(output_file, 'w') #write the results in the file top_cost_drug.txt
 fout.write('drug_name,num_prescriber,total_cost \n') #the first line in this file
 for items in sort_l: #transfer through the list and write it in the file
-    fout.write('%s,%d,%.2f\n' % (items[0],items[1],items[2]))
-    
+    fout.write('%s,%d,%.0f\n' % (items[0],items[1],items[2]))
+fout.close()        
 
 
